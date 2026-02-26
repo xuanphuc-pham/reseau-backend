@@ -4,13 +4,6 @@ Nom et prenom: PHAM Xuan Phuc
 
 Backend pour un forum de discussion (resseau sociaux), construit avec **Express**, **Sequelize** et **PostgreSQL**, conteneurisé avec **Docker** (Il faut lancer des containers).
 
-## Stack technique
-
-- **Runtime** : Node.js 20 (Alpine)
-- **Framework** : Express 5
-- **ORM** : Sequelize 6
-- **Base de données** : PostgreSQL 15
-- **Conteneurisation** : Docker Compose (backend + postgres + pgadmin)
 
 ## Prequisite
 
@@ -29,6 +22,8 @@ Lancer le script en tant sudo. Si vous ne voulez pas vous pouvez donner le droit
 sudo docker compose up
 ```
 N'oublie pas à clear le processus utilisant les portes demandé 5432 (postgres), 3030 (backend), 5050 (pgadmin).
+
+Notons que le site est lancé dans l'environnement du conteneur, pas de machine host. Donc c'est inutile de faire npm sur host.
 
 Je fais un migration ( unmigrate tout d'abord), j'ai mis dans un script. Vous pouvez le faire pendant le testing aussi. 
 ```bash
